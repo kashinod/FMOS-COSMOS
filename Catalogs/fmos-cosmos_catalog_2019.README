@@ -1,0 +1,65 @@
+#
+# 2020.04.30 updated by D.Kashino 
+#
+# ==========================================================================================#                                                              D.Kashino, J.Silverman+, 2018#
+#
+#   CATALOG   fmos-cosmos_catalog_2019.fits
+#   Webpage http://member.ipmu.jp/fmos-cosmos/#
+#   Columns (tags) 45
+#   Rows (objects) 5484
+##   This catalog contains spectroscopic redshift and emission-line measurements#   for the entire FMOS-COSMOS high-resolution sample of 5484 objects.##  -----------------------------------------------------------------------------------------
+#
+#   IMPORTANT REMARKS:
+#
+#   - FLUX_*****: Emission-line fluxes are given in units of erg/s/cm2.
+#     2-sigma upper limits are given as negative numbers 
+#     if the line is not detected but covered by the spectrum.
+#     Emission-line fluxes represent `in-fiber` observed values, and the associated errors 
+#     are `formal` errors returned from MPFIT, but not including the uncertainties on 
+#     the absolute flux calibration.
+#
+#   - The total fluxes may be obtained by multiplying the `in-fiber` values by the aperture 
+#     correction factors: 
+#     APERCORR_BEST_L1 for Halpha, [NII], [SII]
+#     APERCORR_BEST_L2 for Hbeta+[OIII]
+#
+#   - zFlag>=1 is given for objects with approved detection of >=1 emission line(s).
+#     zFlag=-1 for flux calibration stars.
+#     zFlag=-99 if the spectroscopy failed.
+#
+#   - FIT_MODEL flag (>=1) is given for fitting with unusual models:    
+#        #        FIT_MODEL_L1/L2 = 0 if single narrow Halpha+[NII] / Hbeta+[OIII] (default)#        FIT_MODEL_L1/L2 = 1 if single broad Halpha / Hbeta#        FIT_MODEL_L1/L2 = 2 if narrow + broad#        FIT_MODEL_L1/L2 = 3 if narrow + narrow#        FIT_MODEL_L1/L2 = 4 if broad + broad#        FIT_MODEL_L1/L2 = 5 if narrow + narrow + broad#        FIT_MODEL_L1/L2 = 6 if narrow + broad + broad#        FIT_MODEL_L1/L2 = 7 if narrow + narrow + broad + broad##   - FLAG_APERCORR_L1(L2)=0 if using an estimate from the HST/ACS image.
+#     FLAG_APERCORR_L1(L2)=1 if no robust estimate from the HST/ACS image and thus the average offset factor 
+#     in a single observing run.
+#     FLAG_APERCORR_L1(L2)=-99 if no correction factor is given.
+#
+#   - ID_COSMOS2015 denotes IDs (`NUMBER` column) of the best-matched objects from the COSMOS2015 catalog
+#     (Laigle et al. 2016, ApJS, 224,24).
+#
+#   - ID_CHANDRA2016 denotes IDs of the best-matched objects from the Chandra COSMOS Legacy catalog
+#     (Civano et al. 2016, ApJ, 819, 62).
+##
+#  -----------------------------------------------------------------------------------------
+#
+#   If you have any questions, contact D.Kashino (kashinod_at_phys.ethz.ch)
+#
+#   If you use this catalog, please cite the following papers:
+#     D.Kashino et al. 2018, arXiv:??????? (submitted to ApJS)
+#     J.D.Silverman et al. 2015, ApJS, 220, 12
+#
+#
+#  -----------------------------------------------------------------------------------------
+#
+#   Acknowledgement
+#
+#   This catalos is based on data products from observation made with the Subaru Telescope 
+#   operated by the National Astronomical Observatory of Japan.
+#
+##  -----------------------------------------------------------------------------------------
+# Column      TAG           DESCRIPTION#  -----------------------------------------------------------------------------------------
+  1    INDEX                Index for the MASTER catalog (0 -- 5483)  2    FMOS_ID              Unique Identifier  3    RA                   RA (J2000)  4    DEC                  DEC (J2000)  5    ZBEST                Best estimate of redshift  6    ZFLAG                Quality flag of the redshift		  7    OBS_DATE_HL          Observation date (UT) of H-long  8    OBS_DATE_HS          Observation date (UT) of H-short   9    OBS_DATE_JL          Observation date (UT) of J-long 10    SLITID_HL            Slit number of H-long spectrum 11    SLITID_HS            Slit number of H-short spectrum 12    SLITID_JL            Slit number of J-long spectrum
+
+ 13    SEEING_HL            Effective seeing for APERCORR_HL 14    SEEING_HS            Effective seeing for APERCORR_HS 15    SEEING_JL            Effective seeing for APERCORR_JL 16    GRATING_L1           Grating for Halpha+[NII] 17    GRATING_L2           Grating for Hbeta+[OIII]		 18    FLUX_HALPHA          Flux of Halpha (erg/s/cm2) 19    FLUX_ERR_HALPHA      Formal error on the Halpha flux (erg/s/cm2) 20    FWHMV_OBS_HALPHA     Observed FWHM of Halpha [km/s] 21    FWHMV_ERR_HALPHA     Error on the observed FWHM of Halpha [km/s] 22    LOSS_BADPIX_HALPHA   Relative contribution to the Halpha line profile charged by bad pixels  23    FLUX_NII6584         Flux of [NII]6584 (erg/s/cm2) 24    FLUX_ERR_NII6584     Formal error on the [NII]6584 flux (erg/s/cm2) 25    FWHMV_OBS_NII6584    Observed FWHM of [NII]6584 [km/s] 26    FWHMV_ERR_NII6584    Error on the observed FWHM of [NII]6584 [km/s] 27    LOSS_BADPIX_NII      Relative contribution to the [NII]6548+6584 line profile charged by bad pixels  28    FLUX_HBETA           Flux of Hbeta (erg/s/cm2) 29    FLUX_ERR_HBETA       Formal error on the Hbeta flux (erg/s/cm2) 30    FWHMV_OBS_HBETA      Observed FWHM of Hbeta [km/s] 31    FWHMV_ERR_HBETA      Error on the observed FWHM of Hbeta [km/s] 32    LOSS_BADPIX_HBETA    Relative contribution to the Hbeta line profile charged by bad pixels  33    FLUX_OIII5007        Flux of [OIII]5007 (erg/s/cm2) 34    FLUX_ERR_OIII5007    Formal error on the [OIII]5007 flux (erg/s/cm2) 35    FWHMV_OBS_OIII5007   Observed FWHM of [OIII]5007 [km/s] 36    FWHMV_ERR_OIII5007   Error on the observed FWHM of [OIII]5007 [km/s] 37    LOSS_BADPIX_OIII     Relative contribution to the [OIII]4959+5007 line profile charged by bad pixels  38    FIT_MODEL_L1         Flag of the model profile for fitting Halpha+[NII] 39    FIT_MODEL_L2         Flag of the model profile for fitting Hbeta+[OIII] 40    APERCORR_BEST_L1     Aperture correction factor for Halpha+[NII] 41    APERCORR_BEST_L2     Aperture correction factor for Hbeta+[OIII] 42    FLAG_APERCORR_L1     Flag for APERCORR_BEST_L1 43    FLAG_APERCORR_L2     Flag for APERCORR_BEST_L2 44    ID_COSMOS2015        ID of matched object in the COSMOS2015 catalog 45    ID_CHANDRA2016       ID of matched object in the Chandra COSMOS Legacy survey (Civano+16)
+
+# END
+
